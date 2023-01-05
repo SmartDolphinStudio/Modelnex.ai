@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: true
+  vue-demi: false
+packages:
+  - "apps/web"
