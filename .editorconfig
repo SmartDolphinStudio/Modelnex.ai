@@ -1,0 +1,19 @@
+# https://editorconfig.org
+# Unifies coding style across editors and IDEs.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Configuration and data files.
+[*.{json,yml,yaml}]
+indent_size = 2
+
+# Markdown may rely on trailing whitespace for line breaks.
+[*.md]
+trim_trailing_whitespace = false
