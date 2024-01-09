@@ -1,0 +1,6 @@
+node_modules/
+dist/
+dist-modelnex-react/
+/.artifacts/
+/artifacts/
+/tmp-preview/
