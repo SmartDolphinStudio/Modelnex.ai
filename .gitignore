@@ -4,3 +4,15 @@ dist-modelnex-react/
 /.artifacts/
 /artifacts/
 /tmp-preview/
+/legal/project-docs-backup/
+/legal/third-party/sub2api/assets/
+/legal/third-party/sub2api/console-backup/
+/legal/third-party/sub2api/console-docs/
+/legal/third-party/sub2api/deploy/
+/legal/third-party/sub2api/deploy-backup/
+/legal/third-party/sub2api/docs/
+/legal/third-party/sub2api/DEV_GUIDE.md
+/legal/third-party/sub2api/README_CN.md
+/legal/third-party/sub2api/README_JA.md
+/legal/third-party/sub2api/skills/
+.env
