@@ -16,3 +16,9 @@ dist-modelnex-react/
 /legal/third-party/sub2api/README_JA.md
 /legal/third-party/sub2api/skills/
 .env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.crt
+*.log
