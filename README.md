@@ -11,3 +11,21 @@ Links
 
 - Website: <https://modelnex.ai>
 - Documentation: <https://docs.modelnex.ai>
+
+
+## Repository Layout
+
+```text
+apps/web/                 Public static site and console visual shell
+  src/components/         Reusable UI components
+  src/features/console/   User console feature module
+  src/features/docs/      Documentation workspace and localized content
+  src/pages/              Route-level page components
+  src/lib/                Utilities and non-UI engines
+  src/i18n/               Translation files
+infrastructure/nginx/     Static-site Nginx configuration
+docs/project/             Project structure, engineering rules, and handoff
+legal/                    ModelNex legal files and third-party license backups
+```
+
+See `docs/project/PROJECT_STRUCTURE.md` and `docs/project/TECH_STACK_AND_RULES.md` before making structural changes.
