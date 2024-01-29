@@ -4,6 +4,8 @@ dist-modelnex-react/
 /.artifacts/
 /artifacts/
 /tmp-preview/
+
+# Local legal history retained outside the active source tree
 /legal/project-docs-backup/
 /legal/third-party/sub2api/assets/
 /legal/third-party/sub2api/console-backup/
@@ -15,10 +17,51 @@ dist-modelnex-react/
 /legal/third-party/sub2api/README_CN.md
 /legal/third-party/sub2api/README_JA.md
 /legal/third-party/sub2api/skills/
+
+# Environment and secrets
 .env
 .env.local
 .env.*.local
 *.key
 *.pem
 *.crt
+
+# Logs and local runtime output
 *.log
+*.out
+*.err
+
+# Test coverage
+coverage/
+*.lcov
+
+# Build caches and binaries
+*.tsbuildinfo
+services/gateway/bin/
+services/gateway/.gocache/
+services/gateway/server
+services/gateway/modelnex-gateway
+services/*/target/
+apps/admin-console/node_modules/
+apps/admin-console/dist/
+apps/web/node_modules/
+apps/finance/node_modules/
+*.tar.gz
+*.zip
+modelnex-gateway-linux-amd64
+playwright-*.png
+playwright-auth-state.json
+verification-shots/
+vite-*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Local model downloads and transient API scratch files
+qwen-model-api.json
+tmp-*.json
+modelscope-files.json
