@@ -29,3 +29,12 @@ legal/                    ModelNex legal files and third-party license backups
 ```
 
 See `docs/project/PROJECT_STRUCTURE.md` and `docs/project/TECH_STACK_AND_RULES.md` before making structural changes.
+
+
+## Development
+
+```bash
+pnpm install
+pnpm dev
+pnpm build
+```
