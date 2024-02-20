@@ -7,11 +7,10 @@ ModelNex.AI is a React + TypeScript frontend showcase for an AI model platform: 
 > [!NOTE]
 > This repository is currently a static presentation build. It does not run or connect to a production API, database, billing service, or background worker.
 
-Links
+## Links
 
 - Website: <https://modelnex.ai>
 - Documentation: <https://docs.modelnex.ai>
-
 
 ## Repository Layout
 
@@ -30,7 +29,6 @@ legal/                    ModelNex legal files and third-party license backups
 
 See `docs/project/PROJECT_STRUCTURE.md` and `docs/project/TECH_STACK_AND_RULES.md` before making structural changes.
 
-
 ## Development
 
 ```bash
@@ -38,3 +36,13 @@ pnpm install
 pnpm dev
 pnpm build
 ```
+
+## Rules
+
+- Do not commit secrets.
+- Do not remove third-party license or copyright backups.
+- Build artifacts, screenshots, compressed deploy packages, and compiled binaries stay out of Git.
+
+## License
+
+[Apache License 2.0](LICENSE). Contributions are welcome under the same terms.
