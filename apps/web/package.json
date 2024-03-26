@@ -1,0 +1,11 @@
+{
+  "name": "@modelnex/web",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.ts",
+    "build": "tsc -p tsconfig.json && vite build --config vite.config.ts",
+    "preview": "vite preview --outDir ../../dist"
+  }
+}
