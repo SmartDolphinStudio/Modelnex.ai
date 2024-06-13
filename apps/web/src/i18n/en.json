@@ -1,0 +1,43 @@
+{
+  "header": {
+    "brand": "ModelNex.AI",
+    "llmServices": "LLM Services",
+    "chatModels": "Chat",
+    "models": "Models",
+    "modelRankings": "Model Rankings",
+    "agreement": "Agreement",
+    "legalNotice": "Legal Notice",
+    "userAgreement": "User Agreement",
+    "skills": "Skills",
+    "developers": "Developers",
+    "apiDocs": "API Docs",
+    "mcpServer": "MCP Server",
+    "changelog": "Changelog",
+    "community": "Community",
+    "github": "GitHub",
+    "x": "X",
+    "facebook": "Facebook",
+    "reddit": "Reddit",
+    "login": "Login",
+    "signUp": "Sign Up",
+    "language": "EN",
+    "console": "Console",
+    "profileSettings": "Profile Settings",
+    "logout": "Log Out",
+    "pricing": "Pricing",
+    "subscription": "Subscriptions",
+    "apiCredits": "API Credits",
+    "privacy": "Privacy Policy",
+    "risk": "Risk Notice",
+    "openSource": "Open Source",
+    "discord": "Discord"
+  },
+  "hero": {
+    "title": "ModelNex.AI:",
+    "phrases": "Redefining Deep Work|Building the Future|Welcome to the New World",
+    "subtitle": "Architecting focus through intelligence. A deep collaboration platform designed for modern creators to transcend noise and build reality.",
+    "tryAI": "Try AI",
+    "pricing": "Pricing",
+    "console": "Console"
+  }
+}
