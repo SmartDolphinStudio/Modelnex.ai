@@ -1,0 +1,43 @@
+{
+  "header": {
+    "brand": "ModelNex.AI",
+    "llmServices": "LLM 服务",
+    "chatModels": "聊天",
+    "models": "模型",
+    "modelRankings": "模型排行",
+    "agreement": "协议",
+    "legalNotice": "法律声明",
+    "userAgreement": "用户协议",
+    "skills": "技能",
+    "developers": "开发者",
+    "apiDocs": "API 文档",
+    "mcpServer": "MCP 服务器",
+    "changelog": "更新日志",
+    "community": "社区",
+    "github": "GitHub",
+    "x": "X",
+    "facebook": "Facebook",
+    "reddit": "Reddit",
+    "login": "登录",
+    "signUp": "注册",
+    "language": "简体中文",
+    "console": "控制台",
+    "profileSettings": "个人设置",
+    "logout": "退出登录",
+    "pricing": "定价",
+    "subscription": "订阅套餐",
+    "apiCredits": "API 购买",
+    "privacy": "隐私政策",
+    "risk": "风险提示",
+    "openSource": "开源协议",
+    "discord": "Discord"
+  },
+  "hero": {
+    "title": "ModelNex.AI:",
+    "phrases": "重新定义深度工作|构建未来|欢迎来到新世界",
+    "subtitle": "通过智能架构专注力。为现代创作者设计的深度协作平台，超越噪音，构建现实。",
+    "tryAI": "体验 AI",
+    "pricing": "定价",
+    "console": "控制台"
+  }
+}
