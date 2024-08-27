@@ -39,5 +39,27 @@
     "tryAI": "Try AI",
     "pricing": "Pricing",
     "console": "Console"
+  },
+  "footer": {
+    "brand": "ModelNex.AI",
+    "chatPlaceholder": "Start chatting...",
+    "send": "Send",
+    "poweredBy": "Powered by ModelNex-4 Alpha. Responds instantly.",
+    "copyright": "2024 ModelNex.AI. All rights reserved.",
+    "llmServices": "LLM Services",
+    "chatModels": "Chat Models",
+    "modelRankings": "Model Rankings",
+    "agreement": "Agreement",
+    "legalNotice": "Legal Notice",
+    "userAgreement": "User Agreement",
+    "developers": "Developers",
+    "apiDocs": "API Docs",
+    "mcpServer": "MCP Server",
+    "changelog": "Changelog",
+    "community": "Community",
+    "github": "GitHub",
+    "x": "X",
+    "facebook": "Facebook",
+    "reddit": "Reddit"
   }
 }
