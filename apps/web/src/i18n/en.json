@@ -61,5 +61,75 @@
     "x": "X",
     "facebook": "Facebook",
     "reddit": "Reddit"
+  },
+  "errors": {
+    "302": {
+      "title": "302",
+      "quote": "We are all in the gutter, but some of us are looking at the stars.",
+      "author": "Oscar Wilde",
+      "desc": "Redirecting you to a new destination..."
+    },
+    "401": {
+      "title": "401",
+      "quote": "The door was locked, but the key was always in my pocket.",
+      "author": "Haruki Murakami",
+      "desc": "Authentication required. Please sign in to continue."
+    },
+    "402": {
+      "title": "402",
+      "quote": "Everything of value has a price, but not everything with a price has value.",
+      "author": "F. Scott Fitzgerald",
+      "desc": "Payment required to access this resource."
+    },
+    "403": {
+      "title": "403",
+      "quote": "Not all those who wander are lost, but some doors are simply not meant to open.",
+      "author": "J.R.R. Tolkien",
+      "desc": "You do not have permission to access this page."
+    },
+    "404": {
+      "title": "404",
+      "quote": "I am not an explorer's dream, I am simply a traveler who took the wrong path home.",
+      "author": "Pablo Neruda",
+      "desc": "The page you are looking for does not exist."
+    },
+    "408": {
+      "title": "408",
+      "quote": "Time is the most valuable thing a man can spend, and we have waited long enough.",
+      "author": "Theophrastus",
+      "desc": "The request timed out. Please try again."
+    },
+    "409": {
+      "title": "409",
+      "quote": "Two truths cannot coexist in the same space without one yielding to the other.",
+      "author": "Jorge Luis Borges",
+      "desc": "Conflict detected. The resource has been modified."
+    },
+    "410": {
+      "title": "410",
+      "quote": "What is gone is gone, and no amount of wishing will bring it back.",
+      "author": "Emily Dickinson",
+      "desc": "This resource has been permanently removed."
+    },
+    "500": {
+      "title": "500",
+      "quote": "The machine dreamed, and in its dream, it found chaos.",
+      "author": "Philip K. Dick",
+      "desc": "Internal server error. Something went wrong on our end."
+    },
+    "503": {
+      "title": "503",
+      "quote": "Even the brightest stars must rest before they shine again.",
+      "author": "Antoine de Saint-Exupery",
+      "desc": "Service temporarily unavailable. Please try again later."
+    },
+    "goHome": "Go Home",
+    "returnHome": "Return Home"
+  },
+  "maintenance": {
+    "title": "Under Maintenance",
+    "quote": "In the silence between updates, I find the poetry of what we are becoming.",
+    "author": "ModelNex.AI",
+    "desc": "We are improving the experience. Please check back soon."
   }
 }
