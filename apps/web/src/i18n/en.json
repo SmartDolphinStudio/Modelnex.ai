@@ -252,5 +252,288 @@
     "yesterday": "Yesterday",
     "daysAgo": "days ago",
     "justNow": "Just now"
+  },
+  "docs": {
+    "title": "Documentation",
+    "underDevelopment": "Under Development"
+  },
+  "console": {
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "apiKeys": "API Keys",
+      "usage": "Usage",
+      "recharge": "Recharge",
+      "redemption": "Redemption",
+      "billing": "Billing",
+      "pastBilling": "Past Bills",
+      "referrals": "Referrals",
+      "support": "Support"
+    },
+    "topbar": {
+      "searchPlaceholder": "Search commands or docs...",
+      "ubLabel": "Credit"
+    },
+    "dashboard": {
+      "workspace": "Workspace",
+      "title": "Dashboard",
+      "welcomeBack": "Welcome back. Your neural infrastructure is running at optimal parameters.",
+      "currentBalance": "Current Balance",
+      "todayRequests": "Today's Requests",
+      "totalRequests": "Total Requests",
+      "vsYesterday": "vs yesterday",
+      "avgLatency": "Avg Latency",
+      "stable": "Stable",
+      "successRate": "Success Rate",
+      "excellent": "Excellent",
+      "tokenCache": "Token Cache",
+      "requestError": "Request Error",
+      "avgResponse": "Avg Response",
+      "cumulativeUsage": "Cumulative Usage",
+      "requestTrend": "Request Trend (30 days)",
+      "modelDistribution": "Model Distribution",
+      "latencyDistribution": "Latency Distribution (24h)",
+      "avg": "Avg",
+      "errorRateTrend": "Error Rate Trend (7 days)",
+      "alertLogs": "Alert Logs",
+      "quickTools": "Quick Tools",
+      "apiTestbench": "API Testbench",
+      "apiTestbenchDesc": "Debug API interfaces online",
+      "codeExamples": "Code Examples",
+      "codeExamplesDesc": "Multi-language SDK examples",
+      "realtimeMonitor": "Real-time Monitoring",
+      "realtimeMonitorDesc": "View service status",
+      "other": "Other",
+      "balance": "Balance",
+      "plan": "Plan",
+      "errorRatePercent": "Error Rate %",
+      "weekDays": {
+        "0": "Mon",
+        "1": "Tue",
+        "2": "Wed",
+        "3": "Thu",
+        "4": "Fri",
+        "5": "Sat",
+        "6": "Sun"
+      }
+    },
+    "apiKeys": {
+      "title": "API Key Management",
+      "desc": "Securely manage your authentication tokens and monitor usage across environments.",
+      "createKey": "Create New Key",
+      "refresh": "Refresh",
+      "name": "Name",
+      "group": "Group (Model)",
+      "rateLimit": "Rate Limit",
+      "quotaLimit": "Quota Limit",
+      "keyExpiry": "Key Expiry",
+      "generateKey": "Generate Key",
+      "cancel": "Cancel",
+      "active": "Active",
+      "revoked": "Revoked",
+      "limited": "Limited",
+      "allModels": "All Models",
+      "5hours": "5 hours",
+      "1day": "1 day",
+      "7days": "7 days",
+      "30days": "30 days",
+      "unlimited": "Unlimited",
+      "createTitle": "Create New API Key",
+      "namePlaceholder": "e.g., Production Environment",
+      "selectGroup": "Please select model group",
+      "requestCount": "Request count",
+      "save": "Save",
+      "edit": "Edit",
+      "revoke": "Revoke",
+      "activate": "Activate",
+      "delete": "Delete",
+      "key": "Key",
+      "status": "Status",
+      "usage": "Usage",
+      "created": "Created",
+      "lastUsed": "Last Used",
+      "requests": "Requests",
+      "actions": "Actions"
+    },
+    "usage": {
+      "title": "Usage Statistics",
+      "desc": "Monitor your API calls, model usage, and performance metrics.",
+      "totalRequests": "Total Requests",
+      "success": "Success",
+      "errors": "Errors",
+      "requests": "Requests",
+      "tokenUsage": "Token Usage",
+      "thisMonth": "This Month",
+      "requestTrend": "Request Trend",
+      "modelUsageCompare": "Model Usage Comparison",
+      "detailedLogs": "Detailed Logs",
+      "export": "Export",
+      "time": "Time",
+      "model": "Model",
+      "latency": "Latency",
+      "duration": "Duration",
+      "status": "Status",
+      "tokens": "Tokens",
+      "uid": "UID",
+      "cost": "Cost",
+      "successLabel": "Success",
+      "errorLabel": "Error",
+      "requestId": "Request ID",
+      "apiKey": "API Key",
+      "ipAddress": "IP Address",
+      "userAgent": "User Agent",
+      "cachedRequests": "Cached",
+      "cacheHitRate": "Cache Hit Rate",
+      "noLogs": "No records yet.",
+      "days": "days",
+      "day": "Day"
+    },
+    "billing": {
+      "title": "Redeem & Subscription",
+      "desc": "Manage your active subscription, redeem voucher codes, and track billing history.",
+      "currentBalance": "Current Balance",
+      "recharge": "Recharge",
+      "voucherCode": "Voucher Code",
+      "voucherPlaceholder": "Enter voucher code",
+      "redeem": "Redeem",
+      "redeemSuccess": "Redeemed successfully!",
+      "invalidVoucher": "Invalid voucher code",
+      "currentPlan": "Current Plan",
+      "monthlyPrice": "¥99/month",
+      "manageSubscription": "Manage Subscription",
+      "billingRecords": "Billing Records",
+      "date": "Date",
+      "description": "Description",
+      "amount": "Recharge Amount",
+      "monthlyQuota": "Monthly 1,000 Credit quota",
+      "prioritySupport": "Priority technical support",
+      "advancedModels": "Advanced model access",
+      "noRateLimit": "No rate limits",
+      "rechargeDesc": "Choose an API credit package, review recharge history, and select a payment method.",
+      "apiUsageFee": "API Usage Fee",
+      "monthlySub": "Monthly Subscription - Pro",
+      "rechargeTitle": "API Recharge",
+      "traffic": "API Credit Package",
+      "method": "Payment Method",
+      "pay": "Pay Now",
+      "history": "Recharge History",
+      "custom": "Custom Amount",
+      "alipay": "Alipay",
+      "wechat": "WeChat Pay",
+      "card": "Credit Card",
+      "success": "Recharge submitted successfully."
+    },
+    "referrals": {
+      "title": "Referral Program",
+      "desc": "Invite friends to join ModelNex.AI and earn 50 Credit for each successful referral.",
+      "referralCount": "Referrals",
+      "activated": "Activated",
+      "totalRewards": "Total Rewards Earned",
+      "remainingBalance": "Current Remaining Balance",
+      "referralLink": "Your Referral Link",
+      "copyLink": "Copy Link",
+      "inviteCode": "Enter Invite Code",
+      "invitePlaceholder": "Enter friend's invite code",
+      "redeem": "Redeem",
+      "redeemSuccess": "Invite code redeemed! 100 Credit added to your balance.",
+      "invalidInvite": "Invalid invite code",
+      "yourInviteCode": "Your Invite Code",
+      "copy": "Copy",
+      "referralList": "Referral List",
+      "user": "User",
+      "regDate": "Registration Date",
+      "status": "Status",
+      "reward": "Reward",
+      "active": "Active",
+      "pending": "Pending",
+      "shareDesc": "Share this link with friends. You'll earn 50 Credit when they register and make their first recharge."
+    }
+  },
+  "pricing": {
+    "sectionTitle": "Scalable Computing Tiers",
+    "sectionSubtitle": "Unified Standard: 300+ Models, No Speed Limits",
+    "purchaseCredits": "Purchase API Credits",
+    "mostPopular": "Most Popular",
+    "plans": {
+      "medium": {
+        "name": "Nova",
+        "desc": "For builders finding their orbit",
+        "quota": "100,000",
+        "quotaLabel": "Credits · refreshed weekly",
+        "btnText": "Select Plan",
+        "features": [
+          "Full access to 300+ models",
+          "Unthrottled bandwidth, zero speed caps",
+          "Intelligent standard routing",
+          "Community & documentation support"
+        ]
+      },
+      "high": {
+        "name": "Pulsar",
+        "desc": "The professional creator standard",
+        "quota": "1,000,000",
+        "quotaLabel": "Credits · refreshed weekly",
+        "btnText": "Upgrade Now",
+        "features": [
+          "10× weekly compute of Nova",
+          "Priority load-balanced routing",
+          "Parallel concurrent request lanes",
+          "Priority technical support"
+        ]
+      },
+      "max": {
+        "name": "Quasar",
+        "desc": "For heavy-duty computational workloads",
+        "quota": "10,000,000",
+        "quotaLabel": "Credits · refreshed weekly",
+        "btnText": "Select Plan",
+        "features": [
+          "10× weekly compute of Pulsar",
+          "Dedicated compute lanes",
+          "Private adapter weights (LoRA / QLoRA)",
+          "Raised concurrency & rate limits",
+          "Advanced usage analytics"
+        ]
+      },
+      "enterprise": {
+        "name": "Sovereign",
+        "desc": "Massive scale, bespoke logic",
+        "quota": "Unlimited",
+        "quotaLabel": "Tailored engagement",
+        "btnText": "Contact Sales",
+        "features": [
+          "Custom quota & refresh cadence",
+          "Dedicated infrastructure with uptime SLA",
+          "Private / on-premises deployment",
+          "Custom model & fine-tune integration",
+          "Named solutions engineer & deep consulting"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "sectionTitle": "Clarity on our process",
+    "sectionSubtitle": "Support & Common Inquiries",
+    "items": [
+      {
+        "q": "What is a Credit (Unit of Belief)?",
+        "a": "Credit is our unified computational metric. It factorizes model processing time, context window usage, and logical complexity. Unlike tokens, Credit accurately reflects the real-world resource cost of deep tasks."
+      },
+      {
+        "q": "How does \"Unthrottled\" speed work?",
+        "a": "We utilize a dynamic load-balancing mesh. As long as your account has a valid Credit balance, our system routes your requests through high-priority clusters, ensuring minimal latency across all operations."
+      },
+      {
+        "q": "Which models are currently supported?",
+        "a": "Our library includes 300+ models from industry leaders like OpenAI, Anthropic, and Meta, plus specialized fine-tuned models for specific technical domains."
+      },
+      {
+        "q": "Can I use my own fine-tuned weights?",
+        "a": "Yes, Enterprise and Max tier users can upload private adapter weights (LoRA/QLoRA) for real-time inference through our infrastructure."
+      },
+      {
+        "q": "Is my data used for model training?",
+        "a": "Absolutely not. Under our Service Agreement, your data and queries are strictly ephemeral and never used to improve global models or stored without your explicit consent."
+      }
+    ]
   }
 }
