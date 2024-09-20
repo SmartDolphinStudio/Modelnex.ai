@@ -535,5 +535,87 @@
         "a": "Absolutely not. Under our Service Agreement, your data and queries are strictly ephemeral and never used to improve global models or stored without your explicit consent."
       }
     ]
+  },
+  "apiOverview": {
+    "stationAlpha": "Station Alpha",
+    "title": "API Core Infrastructure",
+    "cardTitle": "Next-Gen Intelligent Interface",
+    "cardDesc": "The ModelNex.AI API is more than data transmission; it's an extension of logic. Through millisecond-level responses and deep semantic understanding, we transform human intent into executable digital architecture.",
+    "exploreDocs": "Explore Documentation",
+    "whatIsTitle": "What is ModelNex.AI?",
+    "whatIsDesc": "AI here is not just an algorithm; it's resonance for your mind. A dynamic digital life capable of predicting needs and optimizing paths.",
+    "multimodalTitle": "Multimodal Integration",
+    "multimodalDesc": "Supporting 300+ native model integrations, from text generation to complex logic, solving all intelligence needs in one place."
+  },
+  "valueProp": {
+    "title": "Why ModelNex?",
+    "features": [
+      {
+        "title": "Aesthetic Precision",
+        "desc": "We treat typography and content delivery as an art form, ensuring every interaction feels as refined as a premium publication."
+      },
+      {
+        "title": "Intelligent Hub",
+        "desc": "Our integrated \"Knowledge Hub\" supports automated indexing and real-time collaboration, breaking the silos of static data."
+      },
+      {
+        "title": "Limitless Velocity",
+        "desc": "Unthrottled performance across all tiers. Access 300+ top-tier models with zero latency caps for your critical workflows."
+      }
+    ]
+  },
+  "profile": {
+    "dashboard": "Dashboard",
+    "account": "Account",
+    "title": "Personal Account Dashboard",
+    "accountOverview": "Account Overview",
+    "registered": "Registered",
+    "nickname": "Nickname",
+    "verified": "Verified",
+    "emailVerification": "Email Verification",
+    "ubBalance": "Credit Balance",
+    "details": "Details",
+    "concurrencyLimits": "Concurrency Limits",
+    "connectedAccounts": "Connected Accounts",
+    "email": "Email",
+    "change": "Change",
+    "phone": "Phone",
+    "verify": "Verify",
+    "googleAccount": "Google Account",
+    "disconnect": "Disconnect",
+    "githubAccount": "GitHub Account",
+    "notConnected": "Not connected",
+    "connect": "Connect",
+    "securitySessions": "Security & Sessions",
+    "resetPassword": "Reset Password",
+    "setup2FA": "Setup 2FA",
+    "activeDevices": "Active Devices",
+    "activeNow": "Active Now",
+    "hoursAgo": "hours ago",
+    "thisDevice": "This Device",
+    "logout": "Logout",
+    "manageAllSessions": "Manage All Sessions",
+    "billingStatus": "Billing Status",
+    "currentTier": "Current Tier",
+    "annual": "Annual",
+    "usage": "Usage",
+    "managePlan": "Manage Plan",
+    "referrals": "Referrals",
+    "yourCode": "Your Code",
+    "users": "Users",
+    "earned": "Earned",
+    "notificationPreferences": "Notification Preferences",
+    "billingSubscriptions": "Billing & Subscriptions",
+    "invoicesAlerts": "Invoices and credit alerts.",
+    "emailLabel": "Email",
+    "smsLabel": "SMS",
+    "securityAlerts": "Security Alerts",
+    "loginsChanges": "Logins and account changes.",
+    "riskOperations": "Risk Operations",
+    "dataExport": "Data Export",
+    "archiveActivity": "Archive your account activity.",
+    "deleteAccount": "Delete Account",
+    "irreversibleRemoval": "Irreversible removal of all data.",
+    "copyright": "© 2024 ModelNex.AI"
   }
 }
