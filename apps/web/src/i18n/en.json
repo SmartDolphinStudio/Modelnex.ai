@@ -617,5 +617,29 @@
     "deleteAccount": "Delete Account",
     "irreversibleRemoval": "Irreversible removal of all data.",
     "copyright": "© 2024 ModelNex.AI"
+  },
+  "ai": {
+    "assistant": "AI Assistant",
+    "subtitle": "Your personal console companion",
+    "online": "Online",
+    "welcome": "Hi! I'm your ModelNex AI assistant. I can help you check usage, billing, API keys, payment entry points, and site navigation. What would you like to know?",
+    "placeholder": "Ask me anything about your account...",
+    "quickAccount": "Account Summary",
+    "quickUsage": "Usage Stats",
+    "quickBilling": "Billing Info",
+    "quickMarkdown": "Markdown Table"
+  },
+  "rankings": {
+    "title": "AI Model Rankings",
+    "subtitle": "AI model rankings based on real usage data, updated daily",
+    "byUsers": "By Users",
+    "byTokens": "By Tokens",
+    "rank": "Rank",
+    "model": "Model",
+    "yesterdayUsers": "Yesterday Users",
+    "totalTokens": "Total Tokens",
+    "rankChange": "Rank Change",
+    "weeklyChange": "7-Day Change",
+    "updateNote": "Data updated daily, rankings based on the past 24 hours of usage statistics"
   }
 }
