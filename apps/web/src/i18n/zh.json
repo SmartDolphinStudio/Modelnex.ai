@@ -39,5 +39,27 @@
     "tryAI": "体验 AI",
     "pricing": "定价",
     "console": "控制台"
+  },
+  "footer": {
+    "brand": "ModelNex.AI",
+    "chatPlaceholder": "开始聊天...",
+    "send": "发送",
+    "poweredBy": "由 ModelNex-4 Alpha 提供支持。即时响应。",
+    "copyright": "2024 ModelNex.AI. 保留所有权利。",
+    "llmServices": "LLM 服务",
+    "chatModels": "聊天模型",
+    "modelRankings": "模型排行",
+    "agreement": "协议",
+    "legalNotice": "法律声明",
+    "userAgreement": "用户协议",
+    "developers": "开发者",
+    "apiDocs": "API 文档",
+    "mcpServer": "MCP 服务器",
+    "changelog": "更新日志",
+    "community": "社区",
+    "github": "GitHub",
+    "x": "X",
+    "facebook": "Facebook",
+    "reddit": "Reddit"
   }
 }
