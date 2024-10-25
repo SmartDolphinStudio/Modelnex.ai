@@ -555,5 +555,87 @@
         "a": "绝对不会。根据我们的服务协议，您的数据和查询严格是临时的，未经您的明确同意，不会用于改进全局模型或存储。"
       }
     ]
+  },
+  "apiOverview": {
+    "stationAlpha": "Station Alpha",
+    "title": "API 核心基础设施",
+    "cardTitle": "下一代智能接口",
+    "cardDesc": "ModelNex.AI API 不仅仅是数据传输，它是逻辑的延伸。通过毫秒级响应和深度语义理解，我们将人类意图转化为可执行的数字架构。",
+    "exploreDocs": "探索文档",
+    "whatIsTitle": "什么是 ModelNex.AI？",
+    "whatIsDesc": "这里的 AI 不仅仅是算法，它是您心灵的共鸣。一个能够预测需求和优化路径的动态数字生命。",
+    "multimodalTitle": "多模态集成",
+    "multimodalDesc": "支持 300+ 原生模型集成，从文本生成到复杂逻辑，在一个地方解决所有智能需求。"
+  },
+  "valueProp": {
+    "title": "为什么选择 ModelNex？",
+    "features": [
+      {
+        "title": "美学精准",
+        "desc": "我们将排版和内容交付视为一门艺术，确保每次交互都像高端出版物一样精致。"
+      },
+      {
+        "title": "智能中心",
+        "desc": "我们集成的\"知识中心\"支持自动索引和实时协作，打破静态数据的孤岛。"
+      },
+      {
+        "title": "无限速度",
+        "desc": "所有层级均无限制性能。访问 300+ 顶级模型，为您的关键工作流程提供零延迟上限。"
+      }
+    ]
+  },
+  "profile": {
+    "dashboard": "仪表盘",
+    "account": "账户",
+    "title": "个人账户仪表盘",
+    "accountOverview": "账户概览",
+    "registered": "注册于",
+    "nickname": "昵称",
+    "verified": "已验证",
+    "emailVerification": "邮箱验证",
+    "ubBalance": "Credit 余额",
+    "details": "详情",
+    "concurrencyLimits": "并发限制",
+    "connectedAccounts": "已连接账户",
+    "email": "邮箱",
+    "change": "更改",
+    "phone": "电话",
+    "verify": "验证",
+    "googleAccount": "Google 账户",
+    "disconnect": "断开连接",
+    "githubAccount": "GitHub 账户",
+    "notConnected": "未连接",
+    "connect": "连接",
+    "securitySessions": "安全与会话",
+    "resetPassword": "重置密码",
+    "setup2FA": "设置 2FA",
+    "activeDevices": "活跃设备",
+    "activeNow": "当前活跃",
+    "hoursAgo": "小时前",
+    "thisDevice": "此设备",
+    "logout": "登出",
+    "manageAllSessions": "管理所有会话",
+    "billingStatus": "账单状态",
+    "currentTier": "当前等级",
+    "annual": "年付",
+    "usage": "使用量",
+    "managePlan": "管理计划",
+    "referrals": "推荐",
+    "yourCode": "您的代码",
+    "users": "用户",
+    "earned": "已赚取",
+    "notificationPreferences": "通知偏好",
+    "billingSubscriptions": "账单与订阅",
+    "invoicesAlerts": "发票和信用提醒。",
+    "emailLabel": "邮件",
+    "smsLabel": "短信",
+    "securityAlerts": "安全提醒",
+    "loginsChanges": "登录和账户变更。",
+    "riskOperations": "风险操作",
+    "dataExport": "数据导出",
+    "archiveActivity": "归档您的账户活动。",
+    "deleteAccount": "删除账户",
+    "irreversibleRemoval": "不可逆地删除所有数据。",
+    "copyright": "© 2024 ModelNex.AI"
   }
 }
