@@ -637,5 +637,29 @@
     "deleteAccount": "删除账户",
     "irreversibleRemoval": "不可逆地删除所有数据。",
     "copyright": "© 2024 ModelNex.AI"
+  },
+  "ai": {
+    "assistant": "AI 助手",
+    "subtitle": "您的控制台专属伙伴",
+    "online": "在线",
+    "welcome": "你好！我是你的 ModelNex AI 助手。我可以帮你查看用量、账单、API Key、充值入口和站内页面。你想了解什么？",
+    "placeholder": "问我关于你账户的任何问题...",
+    "quickAccount": "账户概览",
+    "quickUsage": "用量统计",
+    "quickBilling": "账单信息",
+    "quickMarkdown": "Markdown 表格"
+  },
+  "rankings": {
+    "title": "AI 模型排行榜",
+    "subtitle": "基于真实使用数据的 AI 模型排名，每日更新",
+    "byUsers": "按使用人数",
+    "byTokens": "按 Token 用量",
+    "rank": "排名",
+    "model": "模型",
+    "yesterdayUsers": "昨日使用人数",
+    "totalTokens": "总 Token 量",
+    "rankChange": "排名变化",
+    "weeklyChange": "近 7 日变化",
+    "updateNote": "数据每日更新，排名基于过去 24 小时的使用统计"
   }
 }
