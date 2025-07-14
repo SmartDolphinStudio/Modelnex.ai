@@ -1,4 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7f5445" stroke-width="1.5">
-  <circle cx="12" cy="12" r="3"/>
-  <path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="16" cy="16" r="4" fill="url(#g)"/>
+  <circle cx="16" cy="5" r="2.5" fill="url(#g)" opacity="0.9"/>
+  <circle cx="26" cy="12" r="2.5" fill="url(#g)" opacity="0.7"/>
+  <circle cx="23" cy="25" r="2.5" fill="url(#g)" opacity="0.6"/>
+  <circle cx="9" cy="25" r="2.5" fill="url(#g)" opacity="0.7"/>
+  <circle cx="6" cy="12" r="2.5" fill="url(#g)" opacity="0.9"/>
+  <line x1="16" y1="16" x2="16" y2="5" stroke="url(#g)" stroke-width="1.2" opacity="0.5"/>
+  <line x1="16" y1="16" x2="26" y2="12" stroke="url(#g)" stroke-width="1.2" opacity="0.5"/>
+  <line x1="16" y1="16" x2="23" y2="25" stroke="url(#g)" stroke-width="1.2" opacity="0.5"/>
+  <line x1="16" y1="16" x2="9" y2="25" stroke="url(#g)" stroke-width="1.2" opacity="0.5"/>
+  <line x1="16" y1="16" x2="6" y2="12" stroke="url(#g)" stroke-width="1.2" opacity="0.5"/>
 </svg>
