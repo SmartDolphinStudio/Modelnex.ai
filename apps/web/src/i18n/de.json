@@ -30,5 +30,13 @@
     "risk": "Risikohinweise",
     "openSource": "Open Source",
     "discord": "Discord"
+  },
+  "hero": {
+    "title": "ModelNex.AI:",
+    "phrases": "Tiefe Arbeit neu gedacht|Die Zukunft bauen|Willkommen in einer neuen Welt",
+    "subtitle": "Wir schaffen Fokus durch Intelligenz. Eine Plattform für tiefe Zusammenarbeit, die moderne Macher dabei unterstützt, Lärm zu überwinden und Realität zu gestalten.",
+    "tryAI": "KI testen",
+    "pricing": "Preise",
+    "console": "Konsole"
   }
 }
