@@ -38,5 +38,34 @@
     "tryAI": "KI testen",
     "pricing": "Preise",
     "console": "Konsole"
+  },
+  "footer": {
+    "brand": "ModelNex.AI",
+    "chatPlaceholder": "Chat starten ...",
+    "send": "Senden",
+    "poweredBy": "Unterstützt von ModelNex-4 Alpha. Antwortet sofort.",
+    "copyright": "2024 ModelNex.AI. Alle Rechte vorbehalten.",
+    "llmServices": "LLM-Dienste",
+    "chatModels": "Chat-Modelle",
+    "modelRankings": "Modell-Ranking",
+    "agreement": "Vereinbarung",
+    "legalNotice": "Rechtliche Hinweise",
+    "userAgreement": "Nutzungsvereinbarung",
+    "developers": "Entwickler",
+    "apiDocs": "API-Dokumentation",
+    "mcpServer": "MCP-Server",
+    "changelog": "Änderungsprotokoll",
+    "community": "Community",
+    "github": "GitHub",
+    "x": "X",
+    "facebook": "Facebook",
+    "reddit": "Reddit"
+  },
+  "cookie": {
+    "title": "Cookie-Einstellungen",
+    "desc": "Wir verwenden Cookies, um dein Nutzungserlebnis zu verbessern, Inhalte zu personalisieren und den Datenverkehr zu analysieren. Mit „Alle akzeptieren“ stimmst du zu.",
+    "acceptAll": "Alle akzeptieren",
+    "rejectAll": "Alle ablehnen",
+    "rejectWarning": "Bei einer Ablehnung sind einige Dienste möglicherweise nicht verfügbar."
   }
 }
