@@ -67,5 +67,18 @@
     "acceptAll": "Alle akzeptieren",
     "rejectAll": "Alle ablehnen",
     "rejectWarning": "Bei einer Ablehnung sind einige Dienste möglicherweise nicht verfügbar."
+  },
+  "login": {
+    "or": "oder",
+    "emailPlaceholder": "E-Mail-Adresse",
+    "passwordPlaceholder": "Passwort",
+    "verifyCodePlaceholder": "Bestätigungscode",
+    "sendCode": "Code senden",
+    "register": "Konto erstellen",
+    "haveAccount": "Du hast bereits ein Konto?",
+    "noAccount": "Noch kein Konto?",
+    "yes": "Ja",
+    "no": "Nein",
+    "done": "Fertig"
   }
 }
