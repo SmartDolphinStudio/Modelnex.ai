@@ -80,5 +80,83 @@
     "yes": "Ja",
     "no": "Nein",
     "done": "Fertig"
+  },
+  "chat": {
+    "title": "ModelNex.AI",
+    "placeholder": "Stelle eine Frage ...",
+    "send": "Senden",
+    "newChat": "Neuer Chat",
+    "modelSelect": "Modell auswählen",
+    "modelDescriptions": {
+      "Core": "Ausgewogene Alltagsarbeit",
+      "Reason": "Lange, gründliche Analyse",
+      "Fast": "Antworten mit geringer Latenz"
+    },
+    "reasoning": "Analyse",
+    "reasoningSelect": "Analysegrad",
+    "reasoningOptions": {
+      "fast": "Schnell",
+      "standard": "Standard",
+      "deep": "Tief"
+    },
+    "reasoningDescriptions": {
+      "fast": "Schnelle Antworten für einfache Aufgaben",
+      "standard": "Ausgewogene Standardeinstellung",
+      "deep": "Mehr Raum für komplexe Aufgaben"
+    },
+    "recent": "Letzte Chats",
+    "history": "Chatverlauf",
+    "greeting": "Hallo. Woran möchtest du heute arbeiten?",
+    "localMode": "Lokaler Demo-Modus",
+    "plan": "MAX-ABO",
+    "cached": "Cache",
+    "remaining": "Verbleibend",
+    "metrics": {
+      "input": "Eingabe",
+      "output": "Ausgabe",
+      "cache": "Cache",
+      "firstToken": "Erstes Token"
+    },
+    "attach": "Anhang hinzufügen",
+    "attachFile": "Datei anhängen",
+    "attachFileDesc": "Die Datei bleibt in diesem Browser",
+    "removeAttachment": "Anhang entfernen",
+    "more": "Weitere Aktionen",
+    "pin": "Chat anheften",
+    "unpin": "Chat lösen",
+    "rename": "Chat umbenennen",
+    "delete": "Chat löschen",
+    "renameTitle": "Gespräch umbenennen",
+    "chatTitle": "Gesprächstitel",
+    "deleteTitle": "Gespräch löschen?",
+    "deleteDescription": "Das Gespräch wird aus diesem Browser entfernt. Dieser Vorgang kann nicht rückgängig gemacht werden.",
+    "confirmDelete": "Löschen",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "settings": "Abo-Einstellungen",
+    "subscriptionAndUsage": "Abo & Nutzung",
+    "currentSubscription": "Aktuelles Abo",
+    "subscriptionDescription": "Priorisierter Zugriff für konzentriertes Arbeiten",
+    "active": "Aktiv",
+    "currentBalance": "Aktuelles Guthaben",
+    "fiveHourLimit": "5-Stunden-Limit",
+    "sevenDayLimit": "7-Tage-Limit",
+    "resetsInFiveHours": "Rollierendes Fenster · wird in 5 Stunden zurückgesetzt",
+    "resetsInSevenDays": "Rollierendes Fenster · wird in 7 Tagen zurückgesetzt",
+    "used": "genutzt",
+    "resetCredits": "Verfügbare Zurücksetzungen",
+    "resetUsage": "Nutzung zurücksetzen",
+    "confirmResetTitle": "Nutzung zurücksetzen?",
+    "confirmResetDescription": "Eine Zurücksetzung wird verbraucht und beide rollierenden Limits werden geleert. Verbleibende Zurücksetzungen nach Bestätigung:",
+    "confirmReset": "Zurücksetzung bestätigen",
+    "copy": "Nachricht kopieren",
+    "logout": "Abmelden",
+    "openSidebar": "Chatverlauf öffnen",
+    "closeSidebar": "Chatverlauf schließen",
+    "close": "Schließen"
+  },
+  "docs": {
+    "title": "Dokumentation",
+    "underDevelopment": "In Entwicklung"
   }
 }
