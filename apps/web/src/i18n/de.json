@@ -239,5 +239,22 @@
     "whatIsDesc": "Eine dynamische digitale Intelligenz, die Bedürfnisse erkennt und Wege optimiert.",
     "multimodalTitle": "Multimodale Integration",
     "multimodalDesc": "Mehr als 300 native Modellintegrationen, von Textgenerierung bis zu komplexer Logik."
+  },
+  "valueProp": {
+    "title": "Warum ModelNex?",
+    "features": [
+      {
+        "title": "Ästhetische Präzision",
+        "desc": "Wir behandeln Typografie und Inhaltsvermittlung wie eine Kunstform."
+      },
+      {
+        "title": "Intelligentes Zentrum",
+        "desc": "Unser Wissenszentrum unterstützt automatische Indexierung und Zusammenarbeit in Echtzeit."
+      },
+      {
+        "title": "Grenzenlose Geschwindigkeit",
+        "desc": "Leistung ohne Drosselung für wichtige Arbeitsabläufe."
+      }
+    ]
   }
 }
