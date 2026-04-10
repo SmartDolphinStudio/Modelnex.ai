@@ -158,5 +158,86 @@
   "docs": {
     "title": "Dokumentation",
     "underDevelopment": "In Entwicklung"
+  },
+  "pricing": {
+    "sectionTitle": "Skalierbare Rechenstufen",
+    "sectionSubtitle": "Ein Standard: über 300 Modelle, keine Geschwindigkeitslimits",
+    "purchaseCredits": "API-Credits kaufen",
+    "mostPopular": "Am beliebtesten",
+    "plans": {
+      "medium": {
+        "name": "Medium",
+        "desc": "Für frühe Builder",
+        "quota": "100.000 Credit",
+        "quotaLabel": "Wochenlimit",
+        "btnText": "Abo auswählen"
+      },
+      "high": {
+        "name": "High",
+        "desc": "Standard für professionelle Kreative",
+        "quota": "1.000.000 Credit",
+        "quotaLabel": "Wochenlimit",
+        "btnText": "Jetzt upgraden"
+      },
+      "max": {
+        "name": "Max",
+        "desc": "Für hohe Rechenlast",
+        "quota": "10.000.000 Credit",
+        "quotaLabel": "Wochenlimit",
+        "btnText": "Abo auswählen"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Große Skalierung und individuelle Logik",
+        "quota": "Unbegrenzt",
+        "quotaLabel": "Individuelle Lösung",
+        "btnText": "Vertrieb kontaktieren"
+      }
+    },
+    "features": {
+      "autoRefresh": "Automatische Erneuerung alle 5 Stunden",
+      "unthrottled": "Unbegrenzte Bandbreite",
+      "prioritySupport": "Priorisierter technischer Support",
+      "dedicatedLanes": "Dedizierte Rechenkanäle",
+      "customRefresh": "Individuelle Erneuerungsintervalle",
+      "deepConsulting": "Beratung für tiefe Integrationen"
+    }
+  },
+  "faq": {
+    "sectionTitle": "Klarheit über unseren Ablauf",
+    "sectionSubtitle": "Support und häufige Fragen",
+    "items": [
+      {
+        "q": "Was ist ein Credit?",
+        "a": "Credit ist unsere einheitliche Recheneinheit. Sie berücksichtigt Verarbeitungszeit, Kontextfenster und logische Komplexität."
+      },
+      {
+        "q": "Wie funktioniert die unbegrenzte Geschwindigkeit?",
+        "a": "Ein dynamisches Lastverteilungsnetz leitet Anfragen mit gültigem Guthaben über priorisierte Cluster."
+      },
+      {
+        "q": "Welche Modelle werden unterstützt?",
+        "a": "Unsere Bibliothek umfasst mehr als 300 Modelle von OpenAI, Anthropic, Meta und weiteren Anbietern."
+      },
+      {
+        "q": "Kann ich eigene Fine-Tuning-Gewichte verwenden?",
+        "a": "Ja. Enterprise- und Max-Nutzer können private Adaptergewichte für Echtzeit-Inferenz hochladen."
+      },
+      {
+        "q": "Werden meine Daten zum Training verwendet?",
+        "a": "Nein. Daten und Anfragen werden ohne ausdrückliche Zustimmung weder zum Training verwendet noch gespeichert."
+      }
+    ]
+  },
+  "apiOverview": {
+    "stationAlpha": "Station Alpha",
+    "title": "API-Kerninfrastruktur",
+    "cardTitle": "Intelligente Schnittstelle der nächsten Generation",
+    "cardDesc": "Die ModelNex.AI API ist mehr als Datenübertragung: Sie erweitert Logik und verwandelt Absichten in ausführbare digitale Strukturen.",
+    "exploreDocs": "Dokumentation öffnen",
+    "whatIsTitle": "Was ist ModelNex.AI?",
+    "whatIsDesc": "Eine dynamische digitale Intelligenz, die Bedürfnisse erkennt und Wege optimiert.",
+    "multimodalTitle": "Multimodale Integration",
+    "multimodalDesc": "Mehr als 300 native Modellintegrationen, von Textgenerierung bis zu komplexer Logik."
   }
 }
