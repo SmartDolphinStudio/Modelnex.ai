@@ -111,12 +111,7 @@
     "plan": "MAX-ABO",
     "cached": "Cache",
     "remaining": "Verbleibend",
-    "metrics": {
-      "input": "Eingabe",
-      "output": "Ausgabe",
-      "cache": "Cache",
-      "firstToken": "Erstes Token"
-    },
+    "metrics": { "input": "Eingabe", "output": "Ausgabe", "cache": "Cache", "firstToken": "Erstes Token" },
     "attach": "Anhang hinzufügen",
     "attachFile": "Datei anhängen",
     "attachFileDesc": "Die Datei bleibt in diesem Browser",
@@ -155,44 +150,17 @@
     "closeSidebar": "Chatverlauf schließen",
     "close": "Schließen"
   },
-  "docs": {
-    "title": "Dokumentation",
-    "underDevelopment": "In Entwicklung"
-  },
+  "docs": { "title": "Dokumentation", "underDevelopment": "In Entwicklung" },
   "pricing": {
     "sectionTitle": "Skalierbare Rechenstufen",
     "sectionSubtitle": "Ein Standard: über 300 Modelle, keine Geschwindigkeitslimits",
     "purchaseCredits": "API-Credits kaufen",
     "mostPopular": "Am beliebtesten",
     "plans": {
-      "medium": {
-        "name": "Medium",
-        "desc": "Für frühe Builder",
-        "quota": "100.000 Credit",
-        "quotaLabel": "Wochenlimit",
-        "btnText": "Abo auswählen"
-      },
-      "high": {
-        "name": "High",
-        "desc": "Standard für professionelle Kreative",
-        "quota": "1.000.000 Credit",
-        "quotaLabel": "Wochenlimit",
-        "btnText": "Jetzt upgraden"
-      },
-      "max": {
-        "name": "Max",
-        "desc": "Für hohe Rechenlast",
-        "quota": "10.000.000 Credit",
-        "quotaLabel": "Wochenlimit",
-        "btnText": "Abo auswählen"
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "desc": "Große Skalierung und individuelle Logik",
-        "quota": "Unbegrenzt",
-        "quotaLabel": "Individuelle Lösung",
-        "btnText": "Vertrieb kontaktieren"
-      }
+      "medium": { "name": "Medium", "desc": "Für frühe Builder", "quota": "100.000 Credit", "quotaLabel": "Wochenlimit", "btnText": "Abo auswählen" },
+      "high": { "name": "High", "desc": "Standard für professionelle Kreative", "quota": "1.000.000 Credit", "quotaLabel": "Wochenlimit", "btnText": "Jetzt upgraden" },
+      "max": { "name": "Max", "desc": "Für hohe Rechenlast", "quota": "10.000.000 Credit", "quotaLabel": "Wochenlimit", "btnText": "Abo auswählen" },
+      "enterprise": { "name": "Enterprise", "desc": "Große Skalierung und individuelle Logik", "quota": "Unbegrenzt", "quotaLabel": "Individuelle Lösung", "btnText": "Vertrieb kontaktieren" }
     },
     "features": {
       "autoRefresh": "Automatische Erneuerung alle 5 Stunden",
@@ -207,26 +175,11 @@
     "sectionTitle": "Klarheit über unseren Ablauf",
     "sectionSubtitle": "Support und häufige Fragen",
     "items": [
-      {
-        "q": "Was ist ein Credit?",
-        "a": "Credit ist unsere einheitliche Recheneinheit. Sie berücksichtigt Verarbeitungszeit, Kontextfenster und logische Komplexität."
-      },
-      {
-        "q": "Wie funktioniert die unbegrenzte Geschwindigkeit?",
-        "a": "Ein dynamisches Lastverteilungsnetz leitet Anfragen mit gültigem Guthaben über priorisierte Cluster."
-      },
-      {
-        "q": "Welche Modelle werden unterstützt?",
-        "a": "Unsere Bibliothek umfasst mehr als 300 Modelle von OpenAI, Anthropic, Meta und weiteren Anbietern."
-      },
-      {
-        "q": "Kann ich eigene Fine-Tuning-Gewichte verwenden?",
-        "a": "Ja. Enterprise- und Max-Nutzer können private Adaptergewichte für Echtzeit-Inferenz hochladen."
-      },
-      {
-        "q": "Werden meine Daten zum Training verwendet?",
-        "a": "Nein. Daten und Anfragen werden ohne ausdrückliche Zustimmung weder zum Training verwendet noch gespeichert."
-      }
+      { "q": "Was ist ein Credit?", "a": "Credit ist unsere einheitliche Recheneinheit. Sie berücksichtigt Verarbeitungszeit, Kontextfenster und logische Komplexität." },
+      { "q": "Wie funktioniert die unbegrenzte Geschwindigkeit?", "a": "Ein dynamisches Lastverteilungsnetz leitet Anfragen mit gültigem Guthaben über priorisierte Cluster." },
+      { "q": "Welche Modelle werden unterstützt?", "a": "Unsere Bibliothek umfasst mehr als 300 Modelle von OpenAI, Anthropic, Meta und weiteren Anbietern." },
+      { "q": "Kann ich eigene Fine-Tuning-Gewichte verwenden?", "a": "Ja. Enterprise- und Max-Nutzer können private Adaptergewichte für Echtzeit-Inferenz hochladen." },
+      { "q": "Werden meine Daten zum Training verwendet?", "a": "Nein. Daten und Anfragen werden ohne ausdrückliche Zustimmung weder zum Training verwendet noch gespeichert." }
     ]
   },
   "apiOverview": {
@@ -243,18 +196,22 @@
   "valueProp": {
     "title": "Warum ModelNex?",
     "features": [
-      {
-        "title": "Ästhetische Präzision",
-        "desc": "Wir behandeln Typografie und Inhaltsvermittlung wie eine Kunstform."
-      },
-      {
-        "title": "Intelligentes Zentrum",
-        "desc": "Unser Wissenszentrum unterstützt automatische Indexierung und Zusammenarbeit in Echtzeit."
-      },
-      {
-        "title": "Grenzenlose Geschwindigkeit",
-        "desc": "Leistung ohne Drosselung für wichtige Arbeitsabläufe."
-      }
+      { "title": "Ästhetische Präzision", "desc": "Wir behandeln Typografie und Inhaltsvermittlung wie eine Kunstform." },
+      { "title": "Intelligentes Zentrum", "desc": "Unser Wissenszentrum unterstützt automatische Indexierung und Zusammenarbeit in Echtzeit." },
+      { "title": "Grenzenlose Geschwindigkeit", "desc": "Leistung ohne Drosselung für wichtige Arbeitsabläufe." }
     ]
+  },
+  "rankings": {
+    "title": "Rangliste der KI-Modelle",
+    "subtitle": "Rangfolge auf Basis echter Nutzungsdaten, täglich aktualisiert",
+    "byUsers": "Nach Nutzern",
+    "byTokens": "Nach Token-Nutzung",
+    "rank": "Rang",
+    "model": "Modell",
+    "yesterdayUsers": "Nutzer gestern",
+    "totalTokens": "Token gesamt",
+    "rankChange": "Rangänderung",
+    "weeklyChange": "Änderung in 7 Tagen",
+    "updateNote": "Täglich aktualisiert auf Basis der letzten 24 Stunden"
   }
 }
