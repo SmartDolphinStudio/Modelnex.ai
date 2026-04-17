@@ -30,5 +30,13 @@
     "risk": "Risico-informatie",
     "openSource": "Open source",
     "discord": "Discord"
+  },
+  "hero": {
+    "title": "ModelNex.AI:",
+    "phrases": "Diep werk opnieuw gedefinieerd|De toekomst bouwen|Welkom in een nieuwe wereld",
+    "subtitle": "We creëren focus met intelligentie. Een platform voor diepe samenwerking, ontworpen om moderne makers boven ruis uit te laten stijgen en werkelijkheid te bouwen.",
+    "tryAI": "AI proberen",
+    "pricing": "Prijzen",
+    "console": "Console"
   }
 }
