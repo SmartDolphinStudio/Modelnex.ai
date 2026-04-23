@@ -38,5 +38,47 @@
     "tryAI": "AI proberen",
     "pricing": "Prijzen",
     "console": "Console"
+  },
+  "footer": {
+    "brand": "ModelNex.AI",
+    "chatPlaceholder": "Start een chat ...",
+    "send": "Versturen",
+    "poweredBy": "Aangedreven door ModelNex-4 Alpha. Reageert direct.",
+    "copyright": "2024 ModelNex.AI. Alle rechten voorbehouden.",
+    "llmServices": "LLM-diensten",
+    "chatModels": "Chatmodellen",
+    "modelRankings": "Modelranglijst",
+    "agreement": "Overeenkomst",
+    "legalNotice": "Juridische informatie",
+    "userAgreement": "Gebruikersovereenkomst",
+    "developers": "Ontwikkelaars",
+    "apiDocs": "API-documentatie",
+    "mcpServer": "MCP-server",
+    "changelog": "Wijzigingen",
+    "community": "Community",
+    "github": "GitHub",
+    "x": "X",
+    "facebook": "Facebook",
+    "reddit": "Reddit"
+  },
+  "cookie": {
+    "title": "Cookie-instellingen",
+    "desc": "We gebruiken cookies om je ervaring te verbeteren, inhoud te personaliseren en verkeer te analyseren. Met „Alles accepteren” geef je toestemming.",
+    "acceptAll": "Alles accepteren",
+    "rejectAll": "Alles weigeren",
+    "rejectWarning": "Na weigering zijn sommige diensten mogelijk niet beschikbaar."
+  },
+  "login": {
+    "or": "of",
+    "emailPlaceholder": "E-mailadres",
+    "passwordPlaceholder": "Wachtwoord",
+    "verifyCodePlaceholder": "Verificatiecode",
+    "sendCode": "Code versturen",
+    "register": "Account maken",
+    "haveAccount": "Heb je al een account?",
+    "noAccount": "Nog geen account?",
+    "yes": "Ja",
+    "no": "Nee",
+    "done": "Gereed"
   }
 }
