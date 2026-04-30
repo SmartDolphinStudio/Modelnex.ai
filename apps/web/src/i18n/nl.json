@@ -154,5 +154,53 @@
     "openSidebar": "Chatgeschiedenis openen",
     "closeSidebar": "Chatgeschiedenis sluiten",
     "close": "Sluiten"
+  },
+  "docs": {
+    "title": "Documentatie",
+    "underDevelopment": "In ontwikkeling"
+  },
+  "pricing": {
+    "sectionTitle": "Schaalbare rekenniveaus",
+    "sectionSubtitle": "Eén standaard: 300+ modellen, geen snelheidslimieten",
+    "purchaseCredits": "API-credits kopen",
+    "mostPopular": "Meest gekozen",
+    "plans": {
+      "medium": {
+        "name": "Medium",
+        "desc": "Voor vroege bouwers",
+        "quota": "100.000 Credit",
+        "quotaLabel": "Weeklimiet",
+        "btnText": "Plan kiezen"
+      },
+      "high": {
+        "name": "High",
+        "desc": "Professionele standaard",
+        "quota": "1.000.000 Credit",
+        "quotaLabel": "Weeklimiet",
+        "btnText": "Nu upgraden"
+      },
+      "max": {
+        "name": "Max",
+        "desc": "Voor zware rekenbehoeften",
+        "quota": "10.000.000 Credit",
+        "quotaLabel": "Weeklimiet",
+        "btnText": "Plan kiezen"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Grote schaal en maatwerklogica",
+        "quota": "Onbeperkt",
+        "quotaLabel": "Maatwerkoplossing",
+        "btnText": "Sales contacteren"
+      }
+    },
+    "features": {
+      "autoRefresh": "Automatische reset elke 5 uur",
+      "unthrottled": "Onbeperkte bandbreedte",
+      "prioritySupport": "Prioritaire technische support",
+      "dedicatedLanes": "Dedicated rekenkanalen",
+      "customRefresh": "Aangepaste resetfrequentie",
+      "deepConsulting": "Advies voor diepe integraties"
+    }
   }
 }
