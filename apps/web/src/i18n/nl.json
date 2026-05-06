@@ -202,5 +202,42 @@
       "customRefresh": "Aangepaste resetfrequentie",
       "deepConsulting": "Advies voor diepe integraties"
     }
+  },
+  "faq": {
+    "sectionTitle": "Duidelijkheid over onze werkwijze",
+    "sectionSubtitle": "Support en veelgestelde vragen",
+    "items": [
+      {
+        "q": "Wat is een Credit?",
+        "a": "Credit is onze uniforme rekeneenheid. Deze houdt rekening met verwerkingstijd, contextvenster en logische complexiteit."
+      },
+      {
+        "q": "Hoe werkt onbeperkte snelheid?",
+        "a": "Een dynamisch load-balancingnetwerk routeert verzoeken met geldig saldo via prioriteitsclusters."
+      },
+      {
+        "q": "Welke modellen worden ondersteund?",
+        "a": "Onze bibliotheek bevat meer dan 300 modellen van OpenAI, Anthropic, Meta en andere aanbieders."
+      },
+      {
+        "q": "Kan ik eigen fine-tuninggewichten gebruiken?",
+        "a": "Ja. Enterprise- en Max-gebruikers kunnen private adaptergewichten uploaden voor realtime inferentie."
+      },
+      {
+        "q": "Worden mijn gegevens gebruikt voor training?",
+        "a": "Nee. Gegevens en verzoeken worden zonder uitdrukkelijke toestemming niet gebruikt voor training of opgeslagen."
+      }
+    ]
+  },
+  "apiOverview": {
+    "stationAlpha": "Station Alpha",
+    "title": "API-kerninfrastructuur",
+    "cardTitle": "Intelligente interface van de volgende generatie",
+    "cardDesc": "De ModelNex.AI API is meer dan datatransport: ze zet menselijke intentie om in uitvoerbare digitale structuren.",
+    "exploreDocs": "Documentatie bekijken",
+    "whatIsTitle": "Wat is ModelNex.AI?",
+    "whatIsDesc": "Een dynamische digitale intelligentie die behoeften voorspelt en routes optimaliseert.",
+    "multimodalTitle": "Multimodale integratie",
+    "multimodalDesc": "Ondersteuning voor 300+ native modelintegraties, van tekstgeneratie tot complexe logica."
   }
 }
