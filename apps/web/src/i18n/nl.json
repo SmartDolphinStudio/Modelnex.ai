@@ -111,12 +111,7 @@
     "plan": "MAX-ABONNEMENT",
     "cached": "Cache",
     "remaining": "Resterend",
-    "metrics": {
-      "input": "Invoer",
-      "output": "Uitvoer",
-      "cache": "Cache",
-      "firstToken": "Eerste token"
-    },
+    "metrics": { "input": "Invoer", "output": "Uitvoer", "cache": "Cache", "firstToken": "Eerste token" },
     "attach": "Bijlage toevoegen",
     "attachFile": "Bestand toevoegen",
     "attachFileDesc": "Het bestand blijft in deze browser",
@@ -155,44 +150,17 @@
     "closeSidebar": "Chatgeschiedenis sluiten",
     "close": "Sluiten"
   },
-  "docs": {
-    "title": "Documentatie",
-    "underDevelopment": "In ontwikkeling"
-  },
+  "docs": { "title": "Documentatie", "underDevelopment": "In ontwikkeling" },
   "pricing": {
     "sectionTitle": "Schaalbare rekenniveaus",
     "sectionSubtitle": "Eén standaard: 300+ modellen, geen snelheidslimieten",
     "purchaseCredits": "API-credits kopen",
     "mostPopular": "Meest gekozen",
     "plans": {
-      "medium": {
-        "name": "Medium",
-        "desc": "Voor vroege bouwers",
-        "quota": "100.000 Credit",
-        "quotaLabel": "Weeklimiet",
-        "btnText": "Plan kiezen"
-      },
-      "high": {
-        "name": "High",
-        "desc": "Professionele standaard",
-        "quota": "1.000.000 Credit",
-        "quotaLabel": "Weeklimiet",
-        "btnText": "Nu upgraden"
-      },
-      "max": {
-        "name": "Max",
-        "desc": "Voor zware rekenbehoeften",
-        "quota": "10.000.000 Credit",
-        "quotaLabel": "Weeklimiet",
-        "btnText": "Plan kiezen"
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "desc": "Grote schaal en maatwerklogica",
-        "quota": "Onbeperkt",
-        "quotaLabel": "Maatwerkoplossing",
-        "btnText": "Sales contacteren"
-      }
+      "medium": { "name": "Medium", "desc": "Voor vroege bouwers", "quota": "100.000 Credit", "quotaLabel": "Weeklimiet", "btnText": "Plan kiezen" },
+      "high": { "name": "High", "desc": "Professionele standaard", "quota": "1.000.000 Credit", "quotaLabel": "Weeklimiet", "btnText": "Nu upgraden" },
+      "max": { "name": "Max", "desc": "Voor zware rekenbehoeften", "quota": "10.000.000 Credit", "quotaLabel": "Weeklimiet", "btnText": "Plan kiezen" },
+      "enterprise": { "name": "Enterprise", "desc": "Grote schaal en maatwerklogica", "quota": "Onbeperkt", "quotaLabel": "Maatwerkoplossing", "btnText": "Sales contacteren" }
     },
     "features": {
       "autoRefresh": "Automatische reset elke 5 uur",
@@ -207,26 +175,11 @@
     "sectionTitle": "Duidelijkheid over onze werkwijze",
     "sectionSubtitle": "Support en veelgestelde vragen",
     "items": [
-      {
-        "q": "Wat is een Credit?",
-        "a": "Credit is onze uniforme rekeneenheid. Deze houdt rekening met verwerkingstijd, contextvenster en logische complexiteit."
-      },
-      {
-        "q": "Hoe werkt onbeperkte snelheid?",
-        "a": "Een dynamisch load-balancingnetwerk routeert verzoeken met geldig saldo via prioriteitsclusters."
-      },
-      {
-        "q": "Welke modellen worden ondersteund?",
-        "a": "Onze bibliotheek bevat meer dan 300 modellen van OpenAI, Anthropic, Meta en andere aanbieders."
-      },
-      {
-        "q": "Kan ik eigen fine-tuninggewichten gebruiken?",
-        "a": "Ja. Enterprise- en Max-gebruikers kunnen private adaptergewichten uploaden voor realtime inferentie."
-      },
-      {
-        "q": "Worden mijn gegevens gebruikt voor training?",
-        "a": "Nee. Gegevens en verzoeken worden zonder uitdrukkelijke toestemming niet gebruikt voor training of opgeslagen."
-      }
+      { "q": "Wat is een Credit?", "a": "Credit is onze uniforme rekeneenheid. Deze houdt rekening met verwerkingstijd, contextvenster en logische complexiteit." },
+      { "q": "Hoe werkt onbeperkte snelheid?", "a": "Een dynamisch load-balancingnetwerk routeert verzoeken met geldig saldo via prioriteitsclusters." },
+      { "q": "Welke modellen worden ondersteund?", "a": "Onze bibliotheek bevat meer dan 300 modellen van OpenAI, Anthropic, Meta en andere aanbieders." },
+      { "q": "Kan ik eigen fine-tuninggewichten gebruiken?", "a": "Ja. Enterprise- en Max-gebruikers kunnen private adaptergewichten uploaden voor realtime inferentie." },
+      { "q": "Worden mijn gegevens gebruikt voor training?", "a": "Nee. Gegevens en verzoeken worden zonder uitdrukkelijke toestemming niet gebruikt voor training of opgeslagen." }
     ]
   },
   "apiOverview": {
@@ -243,18 +196,22 @@
   "valueProp": {
     "title": "Waarom ModelNex?",
     "features": [
-      {
-        "title": "Esthetische precisie",
-        "desc": "We behandelen typografie en content als een kunstvorm."
-      },
-      {
-        "title": "Intelligent centrum",
-        "desc": "Ons kenniscentrum ondersteunt automatische indexering en realtime samenwerking."
-      },
-      {
-        "title": "Grenzeloze snelheid",
-        "desc": "Ongelimiteerde prestaties voor kritieke workflows."
-      }
+      { "title": "Esthetische precisie", "desc": "We behandelen typografie en content als een kunstvorm." },
+      { "title": "Intelligent centrum", "desc": "Ons kenniscentrum ondersteunt automatische indexering en realtime samenwerking." },
+      { "title": "Grenzeloze snelheid", "desc": "Ongelimiteerde prestaties voor kritieke workflows." }
     ]
+  },
+  "rankings": {
+    "title": "AI-modelranglijst",
+    "subtitle": "Ranglijst op basis van echte gebruiksdata, dagelijks bijgewerkt",
+    "byUsers": "Op gebruikers",
+    "byTokens": "Op tokengebruik",
+    "rank": "Rang",
+    "model": "Model",
+    "yesterdayUsers": "Gebruikers gisteren",
+    "totalTokens": "Totaal tokens",
+    "rankChange": "Rangwijziging",
+    "weeklyChange": "Wijziging in 7 dagen",
+    "updateNote": "Dagelijks bijgewerkt op basis van de laatste 24 uur"
   }
 }
