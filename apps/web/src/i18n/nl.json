@@ -239,5 +239,22 @@
     "whatIsDesc": "Een dynamische digitale intelligentie die behoeften voorspelt en routes optimaliseert.",
     "multimodalTitle": "Multimodale integratie",
     "multimodalDesc": "Ondersteuning voor 300+ native modelintegraties, van tekstgeneratie tot complexe logica."
+  },
+  "valueProp": {
+    "title": "Waarom ModelNex?",
+    "features": [
+      {
+        "title": "Esthetische precisie",
+        "desc": "We behandelen typografie en content als een kunstvorm."
+      },
+      {
+        "title": "Intelligent centrum",
+        "desc": "Ons kenniscentrum ondersteunt automatische indexering en realtime samenwerking."
+      },
+      {
+        "title": "Grenzeloze snelheid",
+        "desc": "Ongelimiteerde prestaties voor kritieke workflows."
+      }
+    ]
   }
 }
