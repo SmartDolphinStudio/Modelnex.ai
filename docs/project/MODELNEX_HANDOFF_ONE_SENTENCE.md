@@ -1,0 +1,1 @@
+ModelNex.AI 是 `Z:\modelnex.ai` 中的静态 React + TypeScript 前端展示项目：不包含产品 API、中转网关、数据库、支付、计费或后台服务；保留法律与第三方许可证备份，不将任何密钥、token 或密码写入 Git 或报告；部署目标为 VMware Ubuntu 虚拟机 `192.168.44.133`，构建结果发布至 `/var/www/modelnex-static`，由 Nginx 服务 `modelnex.ai`、`www.modelnex.ai`、`docs.modelnex.ai` 和 `log.modelnex.ai`，并通过本机 hosts 映射访问；完成后需验证首页与文档路由在真实浏览器中渲染，且 `/api/*` 明确不提供后端服务。
