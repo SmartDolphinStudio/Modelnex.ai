@@ -12,3 +12,20 @@ Root Directories
 - `infrastructure/` - static Nginx deployment assets.
 - `docs/` - Product, architecture, implementation, and handoff documentation.
 - `legal/` - ModelNex legal text and third-party license/copyright backups.
+
+
+## Root Files
+
+- `package.json`, `pnpm-lock.yaml`, `pnpm-workspace.yaml` - workspace metadata, root scripts, and lockfiles.
+- `tsconfig.json` - root TypeScript base config.
+- `apps/web/vite.config.ts`, `apps/web/tsconfig.json`, `apps/web/package.json` - app build configuration.
+- `.env.local` - local secrets and development-only environment values. Never stage or report its contents.
+
+
+## Artifact Policy
+
+Generated files must never be committed. The Vite build emits to the
+repository-root `dist/` directory, which is ignored and disposable. TypeScript
+emits `*.tsbuildinfo`, also ignored. Keep local screenshots, deployment
+packages, logs, and temporary verification material outside the repository
+(or in a transient, ignored local directory) and delete them after use.
