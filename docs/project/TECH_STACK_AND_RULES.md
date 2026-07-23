@@ -19,3 +19,8 @@ Do not introduce new language categories without an explicit decision. This repo
 - Main site and ModelNex user console visual shell: `apps/web`, React + TypeScript + Tailwind CSS + CSS.
 - UI behavior must match ModelNex.AI style: clean light mode by default, restrained colors, practical controls, readable tables, and no marketing landing-page treatment inside dashboards.
 - The deployed site must not call a product API. API paths return an explicit static-site response and the frontend uses display-only data.
+
+
+## Static Runtime
+
+- No product API, gateway, payment, database, or background service is deployed.
