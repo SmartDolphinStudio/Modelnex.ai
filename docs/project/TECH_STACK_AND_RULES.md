@@ -24,3 +24,11 @@ Do not introduce new language categories without an explicit decision. This repo
 ## Static Runtime
 
 - No product API, gateway, payment, database, or background service is deployed.
+
+
+## Security And Secrets
+
+- Never commit or report API keys, tokens, passwords, signing keys, database passwords, or upstream credentials.
+- Secrets belong only in ignored local environment files.
+- Do not log tokens. Mask local credentials in screenshots and final reports.
+- Keep `.env.local` ignored and unstaged.
