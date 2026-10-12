@@ -1,3 +1,4 @@
+import {safeChatRead, chatKey, validSessions, saveChat, clearChatStorage} from '../lib/chatPersistence'
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import AIMessageContent from '../components/AIMessageContent'
 import { useI18n, type Lang } from '../i18n/useI18n'
@@ -35,9 +36,7 @@ type ContextMenuState = {
   y: number
 }
 
-const storageKey = 'smart-dolphin-chat-sessions-v3'
-const legacyStorageKey = 'smart-dolphin-chat-sessions-v2'
-const usageStorageKey = 'smart-dolphin-usage-v1'
+
 const models: ModelName[] = ['Core', 'Reason', 'Fast']
 const reasoningModes: ReasoningMode[] = ['fast', 'standard', 'deep']
 const defaultUsage: UsageState = { fiveHour: 42, sevenDay: 61, apiCredit: 482.35 }
@@ -51,7 +50,7 @@ const localeMap: Record<Lang, string> = {
 }
 
 function currentLang(): Lang {
-  const value = localStorage.getItem('mn-lang')
+  const value = safeChatRead('mn-lang')
   return value === 'zh' || value === 'zh-TW' || value === 'de' || value === 'nl' ? value : 'en'
 }
 
@@ -81,7 +80,7 @@ function createChat(title = localCopy(currentLang()).newChat, greeting = localCo
 
 function readProfileName() {
   const lang = currentLang()
-  return localStorage.getItem('mn-username') || (lang === 'en' ? 'Guest' : lang === 'de' || lang === 'nl' ? 'Gast' : lang === 'zh-TW' ? '訪客' : '访客')
+  return safeChatRead('mn-username') || (lang === 'en' ? 'Guest' : lang === 'de' || lang === 'nl' ? 'Gast' : lang === 'zh-TW' ? '訪客' : '访客')
 }
 
 function fallbackChats(): ChatSession[] {
@@ -101,9 +100,9 @@ function fallbackChats(): ChatSession[] {
 
 function readChats(): ChatSession[] {
   try {
-    const saved = JSON.parse(localStorage.getItem(storageKey) || localStorage.getItem(legacyStorageKey) || '[]')
-    if (Array.isArray(saved) && saved.length > 0 && saved.every((item) => item?.id && Array.isArray(item.messages))) {
-      return saved.map((item) => ({ ...item, pinned: item.pinned === true })) as ChatSession[]
+    const saved = JSON.parse(localStorage.getItem(chatKey('sessions')) || 'null')
+    if (saved?.version===4 && validSessions(saved.data)) {
+      return saved.data.map((item:ChatSession) => ({ ...item, pinned: item.pinned === true })) as ChatSession[]
     }
   } catch {
     // Browser-only conversation data is disposable.
@@ -113,8 +112,8 @@ function readChats(): ChatSession[] {
 
 function readUsage(): UsageState {
   try {
-    const saved = JSON.parse(localStorage.getItem(usageStorageKey) || 'null')
-    if (saved && typeof saved.fiveHour === 'number' && typeof saved.sevenDay === 'number') return { ...defaultUsage, ...saved }
+    const saved = JSON.parse(localStorage.getItem(chatKey('usage')) || 'null')?.data
+    if (saved && [saved.fiveHour,saved.sevenDay,saved.apiCredit].every(v=>typeof v==='number'&&Number.isFinite(v)&&v>=0) && saved.fiveHour<=100 && saved.sevenDay<=100) return { ...defaultUsage, ...saved }
   } catch {
     // Ignore invalid browser-only usage data.
   }
@@ -168,6 +167,7 @@ function aiLang(lang: Lang): 'zh' | 'zh-TW' | 'en' | 'de' | 'nl' {
 
 export default function ChatPage() {
   const { t, lang } = useI18n()
+  const [storageError, setStorageError] = useState(false)
   const [sessions, setSessions] = useState<ChatSession[]>(readChats)
   const [activeChatId, setActiveChatId] = useState<string>()
   const [input, setInput] = useState('')
@@ -206,11 +206,11 @@ export default function ChatPage() {
   }, [isTyping])
 
   useEffect(() => {
-    localStorage.setItem(storageKey, JSON.stringify(sessions))
+    setStorageError(!saveChat(chatKey('sessions'), sessions))
   }, [sessions])
 
   useEffect(() => {
-    localStorage.setItem(usageStorageKey, JSON.stringify(usage))
+    if(!saveChat(chatKey('usage'),usage))setStorageError(true)
   }, [usage])
 
   useEffect(() => {
@@ -338,6 +338,7 @@ export default function ChatPage() {
 
   return (
     <div className="mn-chat flex h-screen overflow-hidden bg-background text-on-surface">
+      {storageError && <div role="alert">浏览器存储不可用或容量超限；当前对话仅保存在内存中。</div>}
       {sidebarOpen && <button aria-label={t('chat.closeSidebar')} onClick={() => setSidebarOpen(false)} className="fixed inset-0 z-20 bg-on-surface/20 lg:hidden" />}
 
       <aside className={'fixed inset-y-0 left-0 z-30 flex w-[18rem] shrink-0 flex-col border-r border-outline-variant/70 bg-surface-container-low shadow-xl transition-transform duration-200 lg:static lg:z-auto lg:translate-x-0 lg:shadow-none ' + (sidebarOpen ? 'translate-x-0' : '-translate-x-full')}>
@@ -361,7 +362,7 @@ export default function ChatPage() {
         </div>
 
         <div className="relative border-t border-outline-variant/60 p-3">
-          {profileOpen && <ProfileMenu profileName={profileName} usage={usage} onSettings={() => { setProfileOpen(false); setSettingsOpen(true) }} onLogout={() => { for (const key of ['mn-logged-in', 'mn-username', 'mn-user-id', 'mn-session-token']) localStorage.removeItem(key); window.location.href = '/' }} t={t} />}
+          {profileOpen && <ProfileMenu profileName={profileName} usage={usage} onSettings={() => { setProfileOpen(false); setSettingsOpen(true) }} onLogout={() => { clearChatStorage(); for (const key of ['mn-logged-in', 'mn-username', 'mn-user-id', 'mn-session-token']) localStorage.removeItem(key); window.location.href = '/' }} t={t} />}
           <div className="flex items-center gap-2 rounded-xl px-2 py-2">
             <button onClick={() => setProfileOpen((value) => !value)} className="flex min-w-0 flex-1 items-center gap-3 text-left"><span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-container text-sm font-bold text-primary"><img src="/smartdolphin.png" alt="" className="h-full w-full object-cover" /></span><span className="min-w-0"><span className="block truncate text-sm font-semibold text-on-surface">{profileName}</span><span className="block text-[11px] text-on-surface-variant">Max · {usage.apiCredit.toFixed(2)} Credit</span></span></button>
             <button onClick={() => setSettingsOpen(true)} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container hover:text-primary" title={t('chat.settings')}><span className="material-symbols-outlined text-[19px]">settings</span></button>

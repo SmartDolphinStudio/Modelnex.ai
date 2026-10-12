@@ -36,6 +36,7 @@ type PaymentIntent = {
 type LockedPaymentOrder = {
   intent: PaymentIntent
   expiresAt: number
+  snapshot: {kind:CheckoutKind; tierId:string; apiAmount:number; tab:PaymentTab; currency:CurrencyCode; digitalMethod:DigitalMethod; coin:'BTC'|'ETH'|'SOL'; chainId:string; couponId:string}
 }
 
 type ChainOption = {
@@ -63,7 +64,7 @@ type OracleQuote = {
 }
 
 const ORDER_LOCK_MS = 60 * 60 * 1000
-const LOCK_STORAGE_KEY = 'mn-payment-locked-order'
+function lockStorageKey(){return 'mn-payment-locked-order-v2:' + (localStorage.getItem('mn-user-id') || 'guest')}
 
 const tiers = [
   { id: 'basic', name: '基础版', price: 29, credit: 1000, period: '月', note: '轻量调用与基础模型访问' },
@@ -115,15 +116,15 @@ const cryptoCoins = [
 ] as const
 
 const chainOptions: ChainOption[] = [
-  { id: 'bitcoin', label: 'Bitcoin Network', token: 'BTC', gasUnit: 'BTC', feeLabel: 'Miner fee', address: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh' },
-  { id: 'ethereum', label: 'Ethereum Mainnet', token: 'ETH', gasUnit: 'ETH', feeLabel: 'Gas', address: '0x6d6f64656c6e65786169436865636b6f7574' },
-  { id: 'arbitrum', label: 'Arbitrum One', token: 'ETH', gasUnit: 'ETH', feeLabel: 'Gas', address: '0xA57RAE05B172A744E0084B7006922B1E9A9DB237' },
-  { id: 'optimism', label: 'Optimism', token: 'ETH', gasUnit: 'ETH', feeLabel: 'Gas', address: '0xB11D05F1F9C1CD2D9B71A35B92394335946AF8CE' },
-  { id: 'base', label: 'Base', token: 'ETH', gasUnit: 'ETH', feeLabel: 'Gas', address: '0xBA5EModelNexCheckout00000000000000000001' },
-  { id: 'polygon', label: 'Polygon PoS', token: 'ETH', gasUnit: 'POL', feeLabel: 'Gas', address: '0xEVM0DE1NEXA1CRED1T5AFE9A9DB237794EFCE16F' },
-  { id: 'bsc', label: 'BNB Smart Chain', token: 'ETH', gasUnit: 'BNB', feeLabel: 'Gas', address: '0xB5C0DE1NEXA1CHECK0UT6922B1E9A9DB237794' },
-  { id: 'avalanche', label: 'Avalanche C-Chain', token: 'ETH', gasUnit: 'AVAX', feeLabel: 'Gas', address: '0xAVAModelNexCheckout000000000000000000001' },
-  { id: 'solana', label: 'Solana Mainnet', token: 'SOL', gasUnit: 'SOL', feeLabel: 'Priority fee', address: 'MNXpay8zM3o9Sv2sVX4kDKy5rQ9uP4iCheck' },
+  { id: 'bitcoin', label: 'Bitcoin Network', token: 'BTC', gasUnit: 'BTC', feeLabel: 'Miner fee', address: 'DEMO-ONLY-NO-RECIPIENT' },
+  { id: 'ethereum', label: 'Ethereum Mainnet', token: 'ETH', gasUnit: 'ETH', feeLabel: 'Gas', address: 'DEMO-ONLY-NO-RECIPIENT' },
+  { id: 'arbitrum', label: 'Arbitrum One', token: 'ETH', gasUnit: 'ETH', feeLabel: 'Gas', address: 'DEMO-ONLY-NO-RECIPIENT' },
+  { id: 'optimism', label: 'Optimism', token: 'ETH', gasUnit: 'ETH', feeLabel: 'Gas', address: 'DEMO-ONLY-NO-RECIPIENT' },
+  { id: 'base', label: 'Base', token: 'ETH', gasUnit: 'ETH', feeLabel: 'Gas', address: 'DEMO-ONLY-NO-RECIPIENT' },
+  { id: 'polygon', label: 'Polygon PoS', token: 'ETH', gasUnit: 'POL', feeLabel: 'Gas', address: 'DEMO-ONLY-NO-RECIPIENT' },
+  { id: 'bsc', label: 'BNB Smart Chain', token: 'ETH', gasUnit: 'BNB', feeLabel: 'Gas', address: 'DEMO-ONLY-NO-RECIPIENT' },
+  { id: 'avalanche', label: 'Avalanche C-Chain', token: 'ETH', gasUnit: 'AVAX', feeLabel: 'Gas', address: 'DEMO-ONLY-NO-RECIPIENT' },
+  { id: 'solana', label: 'Solana Mainnet', token: 'SOL', gasUnit: 'SOL', feeLabel: 'Priority fee', address: 'DEMO-ONLY-NO-RECIPIENT' },
 ]
 
 const cardBrands = [
@@ -233,20 +234,7 @@ function createPreviewIntent(amountUsd: number, currency: CurrencyCode, method: 
     paymentMethod: method,
     signature: mockHash(seed + ':signature'),
     canonicalHash: mockHash(seed + ':canonical'),
-    guardEngine: 'rust-payment-core/hmac-sha256/v1-preview',
-    status: 'active',
-  }
-}
-
-function refreshIntentPayload(intent: PaymentIntent, amountUsd: number, currency: CurrencyCode, method: string, fxRate = fallbackFxRate(currency)): PaymentIntent {
-  const seed = `${intent.orderId}|${amountUsd}|${currency}|${method}|locked`
-  return {
-    ...intent,
-    amountCents: Math.round(convertCurrency(amountUsd, currency, fxRate) * 100),
-    currency,
-    paymentMethod: method,
-    signature: mockHash(seed + ':signature'),
-    canonicalHash: mockHash(seed + ':canonical'),
+    guardEngine: 'browser-demo-identifier/non-cryptographic',
     status: 'active',
   }
 }
@@ -254,28 +242,28 @@ function refreshIntentPayload(intent: PaymentIntent, amountUsd: number, currency
 function readLockedOrder(): LockedPaymentOrder | null {
   if (typeof window === 'undefined') return null
   try {
-    const raw = window.localStorage.getItem(LOCK_STORAGE_KEY)
+    const raw = window.localStorage.getItem(lockStorageKey())
     if (!raw) return null
     const parsed = JSON.parse(raw) as LockedPaymentOrder
-    if (!parsed.intent?.orderId || !parsed.expiresAt || parsed.expiresAt <= Date.now()) {
-      window.localStorage.removeItem(LOCK_STORAGE_KEY)
+    if (!parsed.intent?.orderId || !parsed.snapshot || !['subscription','api-credit'].includes(parsed.snapshot.kind) || !tiers.some(t=>t.id===parsed.snapshot.tierId) || !Number.isFinite(parsed.snapshot.apiAmount) || parsed.snapshot.apiAmount<=0 || !['web3','cards','digital'].includes(parsed.snapshot.tab) || !currencies.some(c=>c.code===parsed.snapshot.currency) || !digitalMethods.some(d=>d.id===parsed.snapshot.digitalMethod) || !cryptoCoins.some(c=>c.id===parsed.snapshot.coin) || !chainOptions.some(c=>c.id===parsed.snapshot.chainId) || typeof parsed.snapshot.couponId!=='string' || !Number.isFinite(parsed.expiresAt) || parsed.expiresAt <= Date.now() || parsed.expiresAt>Date.now()+ORDER_LOCK_MS) {
+      clearLockedOrder()
       return null
     }
     return parsed
   } catch {
-    window.localStorage.removeItem(LOCK_STORAGE_KEY)
+    clearLockedOrder()
     return null
   }
 }
 
-function saveLockedOrder(intent: PaymentIntent, expiresAt: number) {
+function saveLockedOrder(intent: PaymentIntent, expiresAt: number, snapshot: LockedPaymentOrder['snapshot']) {
   if (typeof window === 'undefined' || expiresAt <= Date.now() || intent.status !== 'active') return
-  window.localStorage.setItem(LOCK_STORAGE_KEY, JSON.stringify({ intent, expiresAt }))
+  try {window.localStorage.setItem(lockStorageKey(), JSON.stringify({ intent, expiresAt, snapshot }))} catch {showToast('浏览器无法保存订单，刷新后需要重新创建演示订单', 'error')}
 }
 
 function clearLockedOrder() {
   if (typeof window === 'undefined') return
-  window.localStorage.removeItem(LOCK_STORAGE_KEY)
+  try { window.localStorage.removeItem(lockStorageKey()) } catch { /* Storage may be disabled; the in-memory demo still works. */ }
 }
 
 function formatLockLeft(ms: number) {
@@ -285,26 +273,21 @@ function formatLockLeft(ms: number) {
   return `${minutes}:${seconds}`
 }
 
-function walletProvider() {
-  const w = window as Window & { ethereum?: { request?: (args: { method: string; params?: unknown[] }) => Promise<string[]> } }
-  return w.ethereum
-}
-
 export default function PaymentPage() {
   const navigate = useNavigate()
   const location = useLocation()
   const [params] = useSearchParams()
   const initial = useMemo(() => readInitialCheckout(location.state, params), [location.state, params])
   const initialLockedOrder = useMemo(() => readLockedOrder(), [])
-  const [checkoutKind, setCheckoutKind] = useState<CheckoutKind>(initial.kind)
-  const [selectedTier, setSelectedTier] = useState(initial.tierId)
-  const [apiAmount, setApiAmount] = useState(Number.isFinite(initial.apiAmount) && initial.apiAmount > 0 ? initial.apiAmount : 500)
-  const [tab, setTab] = useState<PaymentTab>('web3')
-  const [currency, setCurrency] = useState<CurrencyCode>('USD')
-  const [digitalMethod, setDigitalMethod] = useState<DigitalMethod>((initial.preferredMethod as DigitalMethod) || 'alipay')
-  const [coin, setCoin] = useState<'BTC' | 'ETH' | 'SOL'>('BTC')
-  const [chainId, setChainId] = useState(chainOptions[0].id)
-  const [couponId, setCouponId] = useState('')
+  const [checkoutKind, setCheckoutKind] = useState<CheckoutKind>(initialLockedOrder?.snapshot.kind || initial.kind)
+  const [selectedTier, setSelectedTier] = useState(initialLockedOrder?.snapshot.tierId || initial.tierId)
+  const [apiAmount, setApiAmount] = useState(initialLockedOrder?.snapshot.apiAmount || (Number.isFinite(initial.apiAmount) && initial.apiAmount > 0 ? initial.apiAmount : 500))
+  const [tab, setTab] = useState<PaymentTab>(initialLockedOrder?.snapshot.tab || 'web3')
+  const [currency, setCurrency] = useState<CurrencyCode>(initialLockedOrder?.snapshot.currency || 'USD')
+  const [digitalMethod, setDigitalMethod] = useState<DigitalMethod>(initialLockedOrder?.snapshot.digitalMethod || (initial.preferredMethod as DigitalMethod) || 'alipay')
+  const [coin, setCoin] = useState<'BTC' | 'ETH' | 'SOL'>(initialLockedOrder?.snapshot.coin || 'BTC')
+  const [chainId, setChainId] = useState(initialLockedOrder?.snapshot.chainId || chainOptions[0].id)
+  const [couponId, setCouponId] = useState(initialLockedOrder?.snapshot.couponId || '')
   const [detailsOpen, setDetailsOpen] = useState(true)
   const [intent, setIntent] = useState<PaymentIntent>(() => initialLockedOrder?.intent || createPreviewIntent(99, 'USD', 'web3_btc'))
   const [lockExpiresAt, setLockExpiresAt] = useState(() => initialLockedOrder?.expiresAt || Date.now() + ORDER_LOCK_MS)
@@ -350,7 +333,12 @@ export default function PaymentPage() {
   }, [coin, chainId])
 
   useEffect(() => {
-    setIntent((prev) => refreshIntentPayload(prev, finalPrice, currency, paymentMethod, fxRate))
+    setIntent((prev) => {
+      const amountCents=Math.round(convertCurrency(finalPrice,currency,fxRate)*100)
+      if(prev.amountCents===amountCents && prev.currency===currency && prev.paymentMethod===paymentMethod)return prev
+      setLockExpiresAt(Date.now()+ORDER_LOCK_MS)
+      return createPreviewIntent(finalPrice,currency,paymentMethod,fxRate,prev)
+    })
   }, [currency, finalPrice, paymentMethod, fxRate])
 
   useEffect(() => {
@@ -377,8 +365,8 @@ export default function PaymentPage() {
       clearLockedOrder()
       return
     }
-    saveLockedOrder(intent, lockExpiresAt)
-  }, [intent, lockExpiresAt])
+    saveLockedOrder(intent, lockExpiresAt, {kind:checkoutKind,tierId:selectedTier,apiAmount,tab,currency,digitalMethod,coin,chainId,couponId})
+  }, [intent, lockExpiresAt, checkoutKind, selectedTier, apiAmount, tab, currency, digitalMethod, coin, chainId, couponId])
 
   useEffect(() => () => {
     if (authTimer.current) window.clearTimeout(authTimer.current)
@@ -395,7 +383,7 @@ export default function PaymentPage() {
     setIntent(next)
     setLockExpiresAt(nextExpiresAt)
     setLockTick(Date.now())
-    saveLockedOrder(next, nextExpiresAt)
+    saveLockedOrder(next, nextExpiresAt, {kind:checkoutKind,tierId:selectedTier,apiAmount,tab,currency,digitalMethod,coin,chainId,couponId})
     setReplaceDialogOpen(false)
     showToast('新订单已生成，订单锁定 60 分钟')
   }
@@ -409,23 +397,9 @@ export default function PaymentPage() {
   }
 
   async function connectWallet() {
-    setWalletStatus('正在连接钱包')
-    const provider = walletProvider()
-    if (!provider?.request) {
-      setWalletStatus('未检测到浏览器钱包')
-      showToast('未检测到浏览器钱包，请安装 MetaMask、OKX、Rabby 或 Coinbase Wallet', 'error')
-      return
-    }
-    try {
-      const accounts = await provider.request({ method: 'eth_requestAccounts' })
-      const first = accounts?.[0] || ''
-      setWalletAddress(first)
-      setWalletStatus(first ? '已连接' : '未授权地址')
-      showToast(first ? '钱包已连接' : '钱包未返回地址', first ? 'success' : 'error')
-    } catch (error) {
-      setWalletStatus('连接被拒绝')
-      showToast(error instanceof Error ? error.message : '钱包连接失败', 'error')
-    }
+    setWalletAddress('DEMO-WALLET:'+activeChain.id)
+    setWalletStatus('演示钱包（未连接真实钱包）')
+    showToast('仅模拟所选网络的钱包状态，不请求真实账户或交易')
   }
 
   function beginExternalAuthorization(method: DigitalMethod) {
@@ -475,11 +449,11 @@ export default function PaymentPage() {
           <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-green-50 text-green-700">
             <span className="material-symbols-outlined text-4xl">check_circle</span>
           </div>
-          <h1 className="text-2xl font-semibold text-primary">支付已完成</h1>
+          <h1 className="text-2xl font-semibold text-primary">付款流程演示完成</h1>
           <p className="mt-3 text-sm text-on-surface-variant">
             {checkoutKind === 'subscription'
-              ? `${tier.name} 已开通，${tier.credit.toLocaleString()} Credit/月已写入账户。`
-              : `${credit.toLocaleString()} Credit 已写入账户。`}
+              ? `${tier.name} 演示流程已结束，未开通真实订阅或增加账户余额。`
+              : `${credit.toLocaleString()} Credit 为演示购买数值，账户余额没有增加。`}
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <button onClick={() => navigate('/console/recharge')} className="rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-on-primary">返回充值中心</button>

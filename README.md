@@ -48,13 +48,8 @@ pnpm build
 [Apache License 2.0](LICENSE). Contributions are welcome under the same terms.
 
 
----
+## Maintenance status
 
-**Archived on December 1, 2025.** This project is no longer maintained. The code remains available for reference.
+The GitHub repository is active and is receiving audit fixes. Earlier archive notices did not match repository state and have been corrected. No production backend or billing service is implemented. Authentication, keys, usage and payments shown by the interface are demonstrations.
 
-
-
----
-
-**Archived on December 1, 2025.** No longer maintained.
-
+Use `pnpm install --frozen-lockfile`; the committed lockfile and `packageManager` field define the reproducible dependency baseline.

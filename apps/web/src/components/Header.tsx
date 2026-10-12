@@ -1,3 +1,4 @@
+import { clearChatStorage } from '../lib/chatPersistence'
 ﻿import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -71,6 +72,7 @@ export default function Header() {
   }, [langOpen, userOpen])
 
   const handleLogout = () => {
+    clearChatStorage()
     useConsoleStore.getState().resetSessionState()
     for (const key of ['mn-logged-in', 'mn-username', 'mn-user-id', 'mn-session-token', 'mn-avatar', 'mn-user-uid16', 'mn-registered-at', 'mn-local-credit-balance', 'mn-local-payment-orders']) {
       localStorage.removeItem(key)

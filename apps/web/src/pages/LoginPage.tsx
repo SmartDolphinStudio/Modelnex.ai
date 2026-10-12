@@ -1,3 +1,4 @@
+import { clearChatStorage } from '../lib/chatPersistence'
 import { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useConsoleStore } from '../features/console/store'
@@ -31,11 +32,11 @@ function flag(iso: string) {
 }
 
 function filterEmailInput(value: string) {
-  return value.replace(/[^A-Za-z0-9.@]/g, '')
+  return value
 }
 
 function filterPasswordInput(value: string) {
-  return value.replace(/[^A-Za-z0-9@.]/g, '')
+  return value
 }
 
 export default function LoginPage() {
@@ -69,6 +70,7 @@ export default function LoginPage() {
   }, [countdown])
 
   const finishAuth = (user: any, token?: string) => {
+    clearChatStorage()
     useConsoleStore.getState().resetSessionState()
     for (const key of ['mn-session-token', 'mn-user-id', 'mn-username', 'mn-provider', 'mn-avatar', 'mn-user-uid16', 'mn-registered-at', 'mn-local-credit-balance', 'mn-local-payment-orders']) {
       localStorage.removeItem(key)

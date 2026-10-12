@@ -1,3 +1,4 @@
+import { docsHosts, logHosts } from '../host-map'
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom'
 import { I18nProvider } from './i18n/useI18n'
 import Header from './components/Header'
@@ -81,8 +82,8 @@ function RequireAuth({ children }: { children: React.ReactNode }) {
 
 function App() {
   const hostname = window.location.hostname
-  const isDocDomain = hostname === 'docs.modelnex.ai'
-  const isLogDomain = hostname.startsWith('log.')
+  const isDocDomain = docsHosts.includes(hostname)
+  const isLogDomain = logHosts.includes(hostname)
 
   return (
     <I18nProvider>

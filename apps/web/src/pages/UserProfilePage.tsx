@@ -1,3 +1,4 @@
+import { clearChatStorage } from '../lib/chatPersistence'
 import { useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useConsoleStore } from '../features/console/store'
@@ -76,6 +77,7 @@ export default function UserProfilePage() {
   }
 
   function handleLogout() {
+    clearChatStorage()
     for (const key of ['mn-logged-in', 'mn-username', 'mn-user-id', 'mn-session-token', 'mn-user-email', 'mn-user-phone', 'mn-auth-provider']) {
       localStorage.removeItem(key)
     }

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { BotEngine, type BotFrame, type Look } from '../lib/bloub/bot/engine'
 import { NOTIF_BLUE } from '../lib/bloub/bot/decor'
 import { clamp, easings } from '../lib/bloub/bot/math'
@@ -45,8 +45,7 @@ export default function BloubBot({
 }: BloubBotProps) {
   const svgRef = useRef<SVGSVGElement>(null)
   const [frame, setFrame] = useState<BotFrame | null>(null)
-  const uidRef = useRef(Math.random().toString(36).slice(2, 8))
-  const uid = uidRef.current
+  const uid = useId()
   const maskId = `bot-mask-${uid}`
 
   // 最新的外部驱动值，供 rAF 读取。
